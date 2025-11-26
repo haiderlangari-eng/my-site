@@ -1,0 +1,87 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="fa">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IP Generator — Professional</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <h1>IP Generator — Premium</h1>
+        <p class="muted">Generate realistic IPv4 + 2×IPv6 per selected country & service</p>
+      </div>
+      <div class="meta">Status: <span id="status-badge" class="badge ok">Ready</span></div>
+    </header>
+
+    <section class="card form-card">
+      <h2>Service & Country</h2>
+      <div class="row">
+        <label for="country">Country</label>
+        <select id="country" aria-label="Country">
+          <option value="germany">Germany</option>
+          <option value="uae">UAE</option>
+          <option value="usa">USA</option>
+          <option value="turkya">Turkey</option>
+          <option value="iran">Iran</option>
+          <option value="finland">Finland</option>
+        </select>
+      </div>
+
+      <h3>Service Options</h3>
+      <div class="service-buttons">
+        <button class="service-btn" data-service="VIP">VIP</button>
+        <button class="service-btn" data-service="GOLD">GOLD</button>
+        <button class="service-btn" data-service="BRONZE">BRONZE</button>
+      </div>
+
+      <h3>Subscription / Input</h3>
+      <div class="row">
+        <label for="days">Days</label>
+        <input id="days" type="number" min="1" value="30" />
+      </div>
+      <div class="row">
+        <label for="users">Users</label>
+        <input id="users" type="number" min="1" value="1" />
+      </div>
+      <div class="row">
+        <label for="dataLimit">Data Limit (GB)</label>
+        <input id="dataLimit" type="number" min="1" value="10" />
+      </div>
+      <div class="row">
+        <label for="pack">Pack</label>
+        <select id="pack">
+          <option>VIP</option>
+          <option>GOLD</option>
+          <option>BRONZE</option>
+        </select>
+      </div>
+
+      <div class="actions">
+        <button id="generate" class="primary">Generate IPs</button>
+        <button id="copyAll">Copy All</button>
+        <button id="reset">Reset</button>
+      </div>
+    </section>
+
+    <section class="card output-card">
+      <h2>Generated Result</h2>
+      <div id="resultArea" class="result empty">
+        <p>No result yet. Choose a country and a service, then click <strong>Generate IPs</strong>.</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>Note: For production, replace the sample CIDR lists with an authoritative GeoIP/CIDR dataset (IP2Location / RIR exports / BGPView). See sources in the UI.</small>
+      <div class="sources">
+        <a href="#" id="source1">IP2Location (examples)</a> · <a href="#" id="source2">BGPView</a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
