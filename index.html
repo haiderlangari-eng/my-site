@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WireGuard Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="box">
+    <h2>WireGuard Config Generator</h2>
+
+    <label>Country</label>
+    <select id="country">
+        <option value="germany">Germany</option>
+        <option value="uae">UAE</option>
+        <option value="usa">USA</option>
+        <option value="turkey">Turkey</option>
+        <option value="iran">Iran</option>
+        <option value="finland">Finland</option>
+    </select>
+
+    <label>Days</label>
+    <input id="days" type="number">
+
+    <label>Users</label>
+    <input id="users" type="number">
+
+    <label>Data Limit (GB)</label>
+    <input id="limit" type="number">
+
+    <label>Pack</label>
+    <select id="pack">
+        <option>VIP</option>
+        <option>GOLD</option>
+        <option>BRONZE</option>
+    </select>
+
+    <button onclick="generate()">Generate</button>
+
+    <textarea id="result" readonly></textarea>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
